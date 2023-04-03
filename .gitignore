@@ -1,7 +1,24 @@
 projet4/.idea
-.__pycache__
-.git
+__pycache__
+*.git
 /projet4/.env
 /models/.__pycache__
 /views/.__pycache__
+# Environments
 .env
+.venv
+env/
+venv/
+ENV/
+env.bak/
+venv.bak/
+# IPython
+profile_default/
+ipython_config.py
+
+# PyBuilder
+.pybuilder/
+target/
+
+# Jupyter Notebook
+.ipynb_checkpoints
