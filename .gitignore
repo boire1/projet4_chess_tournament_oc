@@ -1,6 +1,6 @@
 projet4/.idea
 __pycache__
-*.git
+.git
 /projet4/.env
 /models/.__pycache__
 /views/.__pycache__
