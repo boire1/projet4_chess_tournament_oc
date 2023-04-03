@@ -1,0 +1,386 @@
+[
+  {
+    "idm": 0,
+    "player1": 0,
+    "player2": 1,
+    "winner": 2
+  },
+  {
+    "idm": 1,
+    "player1": 2,
+    "player2": 3,
+    "winner": 1
+  },
+  {
+    "idm": 2,
+    "player1": 4,
+    "player2": 5,
+    "winner": 2
+  },
+  {
+    "idm": 3,
+    "player1": 6,
+    "player2": 7,
+    "winner": 1
+  },
+  {
+    "idm": 4,
+    "player1": 0,
+    "player2": 2,
+    "winner": 2
+  },
+  {
+    "idm": 5,
+    "player1": 1,
+    "player2": 3,
+    "winner": 1
+  },
+  {
+    "idm": 6,
+    "player1": 4,
+    "player2": 6,
+    "winner": 2
+  },
+  {
+    "idm": 7,
+    "player1": 5,
+    "player2": 7,
+    "winner": 2
+  },
+  {
+    "idm": 8,
+    "player1": 0,
+    "player2": 3,
+    "winner": 1
+  },
+  {
+    "idm": 9,
+    "player1": 1,
+    "player2": 2,
+    "winner": 2
+  },
+  {
+    "idm": 10,
+    "player1": 4,
+    "player2": 7,
+    "winner": 2
+  },
+  {
+    "idm": 11,
+    "player1": 5,
+    "player2": 6,
+    "winner": 1
+  },
+  {
+    "idm": 12,
+    "player1": 0,
+    "player2": 4,
+    "winner": 2
+  },
+  {
+    "idm": 13,
+    "player1": 1,
+    "player2": 5,
+    "winner": 2
+  },
+  {
+    "idm": 14,
+    "player1": 2,
+    "player2": 6,
+    "winner": 2
+  },
+  {
+    "idm": 15,
+    "player1": 3,
+    "player2": 7,
+    "winner": 1
+  },
+  {
+    "idm": 16,
+    "player1": 17,
+    "player2": 2,
+    "winner": 0
+  },
+  {
+    "idm": 17,
+    "player1": 6,
+    "player2": 8,
+    "winner": 1
+  },
+  {
+    "idm": 18,
+    "player1": 3,
+    "player2": 14,
+    "winner": 0
+  },
+  {
+    "idm": 19,
+    "player1": 10,
+    "player2": 16,
+    "winner": 2
+  },
+  {
+    "idm": 20,
+    "player1": 17,
+    "player2": 6,
+    "winner": 0
+  },
+  {
+    "idm": 21,
+    "player1": 2,
+    "player2": 8,
+    "winner": 2
+  },
+  {
+    "idm": 22,
+    "player1": 3,
+    "player2": 10,
+    "winner": 1
+  },
+  {
+    "idm": 23,
+    "player1": 14,
+    "player2": 16,
+    "winner": 0
+  },
+  {
+    "idm": 24,
+    "player1": 17,
+    "player2": 8,
+    "winner": 1
+  },
+  {
+    "idm": 25,
+    "player1": 2,
+    "player2": 6,
+    "winner": 2
+  },
+  {
+    "idm": 26,
+    "player1": 3,
+    "player2": 16,
+    "winner": 0
+  },
+  {
+    "idm": 27,
+    "player1": 14,
+    "player2": 10,
+    "winner": 2
+  },
+  {
+    "idm": 28,
+    "player1": 17,
+    "player2": 3,
+    "winner": 0
+  },
+  {
+    "idm": 29,
+    "player1": 2,
+    "player2": 14,
+    "winner": 1
+  },
+  {
+    "idm": 30,
+    "player1": 6,
+    "player2": 10,
+    "winner": 2
+  },
+  {
+    "idm": 31,
+    "player1": 8,
+    "player2": 16,
+    "winner": 0
+  },
+  {
+    "idm": 32,
+    "player1": 16,
+    "player2": 8,
+    "winner": 2
+  },
+  {
+    "idm": 33,
+    "player1": 10,
+    "player2": 4,
+    "winner": 1
+  },
+  {
+    "idm": 34,
+    "player1": 5,
+    "player2": 11,
+    "winner": 0
+  },
+  {
+    "idm": 35,
+    "player1": 7,
+    "player2": 1,
+    "winner": 1
+  },
+  {
+    "idm": 36,
+    "player1": 16,
+    "player2": 10,
+    "winner": 1
+  },
+  {
+    "idm": 37,
+    "player1": 8,
+    "player2": 4,
+    "winner": 2
+  },
+  {
+    "idm": 38,
+    "player1": 5,
+    "player2": 7,
+    "winner": 0
+  },
+  {
+    "idm": 39,
+    "player1": 11,
+    "player2": 1,
+    "winner": 1
+  },
+  {
+    "idm": 40,
+    "player1": 16,
+    "player2": 4,
+    "winner": 1
+  },
+  {
+    "idm": 41,
+    "player1": 8,
+    "player2": 10,
+    "winner": 0
+  },
+  {
+    "idm": 42,
+    "player1": 5,
+    "player2": 1,
+    "winner": 2
+  },
+  {
+    "idm": 43,
+    "player1": 11,
+    "player2": 7,
+    "winner": 1
+  },
+  {
+    "idm": 44,
+    "player1": 16,
+    "player2": 5,
+    "winner": 0
+  },
+  {
+    "idm": 45,
+    "player1": 8,
+    "player2": 11,
+    "winner": 1
+  },
+  {
+    "idm": 46,
+    "player1": 10,
+    "player2": 7,
+    "winner": 2
+  },
+  {
+    "idm": 47,
+    "player1": 4,
+    "player2": 1,
+    "winner": 1
+  },
+  {
+    "idm": 48,
+    "player1": 18,
+    "player2": 12,
+    "winner": 2
+  },
+  {
+    "idm": 49,
+    "player1": 10,
+    "player2": 5,
+    "winner": 1
+  },
+  {
+    "idm": 50,
+    "player1": 4,
+    "player2": 7,
+    "winner": 0
+  },
+  {
+    "idm": 51,
+    "player1": 20,
+    "player2": 1,
+    "winner": 2
+  },
+  {
+    "idm": 52,
+    "player1": 18,
+    "player2": 10,
+    "winner": 1
+  },
+  {
+    "idm": 53,
+    "player1": 12,
+    "player2": 5,
+    "winner": 2
+  },
+  {
+    "idm": 54,
+    "player1": 4,
+    "player2": 20,
+    "winner": 2
+  },
+  {
+    "idm": 55,
+    "player1": 7,
+    "player2": 1,
+    "winner": 1
+  },
+  {
+    "idm": 56,
+    "player1": 18,
+    "player2": 5,
+    "winner": 0
+  },
+  {
+    "idm": 57,
+    "player1": 12,
+    "player2": 10,
+    "winner": 1
+  },
+  {
+    "idm": 58,
+    "player1": 4,
+    "player2": 1,
+    "winner": 1
+  },
+  {
+    "idm": 59,
+    "player1": 7,
+    "player2": 20,
+    "winner": 1
+  },
+  {
+    "idm": 60,
+    "player1": 18,
+    "player2": 4,
+    "winner": 0
+  },
+  {
+    "idm": 61,
+    "player1": 12,
+    "player2": 7,
+    "winner": 0
+  },
+  {
+    "idm": 62,
+    "player1": 10,
+    "player2": 20,
+    "winner": 0
+  },
+  {
+    "idm": 63,
+    "player1": 5,
+    "player2": 1,
+    "winner": 1
+  }
+]

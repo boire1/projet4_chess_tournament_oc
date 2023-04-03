@@ -1,0 +1,70 @@
+[
+  {
+    "idt": 0,
+    "name": "Paris",
+    "place": "Paris",
+    "date": "2000-12-31",
+    "number_rounds": 4,
+    "players_list_by_ids": [
+      0,
+      1,
+      2,
+      3,
+      4,
+      5,
+      6,
+      7
+    ]
+  },
+  {
+    "idt": 1,
+    "name": "Friends",
+    "place": "Lyon",
+    "date": "2023-03-14",
+    "number_rounds": 4,
+    "players_list_by_ids": [
+      16,
+      8,
+      10,
+      4,
+      5,
+      11,
+      7,
+      1
+    ]
+  },
+  {
+    "idt": 2,
+    "name": "Pianiste",
+    "place": "Toulouse",
+    "date": "2023-03-18",
+    "number_rounds": 4,
+    "players_list_by_ids": [
+      17,
+      2,
+      6,
+      8,
+      3,
+      14,
+      10,
+      16
+    ]
+  },
+  {
+    "idt": 3,
+    "name": "Cuisinier",
+    "place": "Bahamas",
+    "date": "2023-04-01",
+    "number_rounds": 4,
+    "players_list_by_ids": [
+      18,
+      12,
+      10,
+      5,
+      4,
+      7,
+      20,
+      1
+    ]
+  }
+]
