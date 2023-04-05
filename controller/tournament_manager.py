@@ -37,7 +37,7 @@ class TournamentManager:
 
     # ---------------------------------------------------------------------------------
     def get_user_choice(self):
-        # Affichage du menu
+        '''Display of the menu'''
         self.user_choice = TopMenu.show_topmenu()
 
     # ---------------------------------------------------------------------------------
@@ -97,7 +97,8 @@ class TournamentManager:
     def create_players(self):
         players_list = PlayerView.get_players_from_user()
         self.db.save_players(players_list)
-
+        
+    '''This function get list of matches already played'''
     def get_duel_dico(self, rounds, players_list):
         duel_dico = {}
         
@@ -167,7 +168,7 @@ class TournamentManager:
         new_matches_ids = self.db.save_matches(matches_list_upd)
         return new_duel_dico, new_matches_ids
     
-    ''' This function is for the reporting the individual rankings of players, the total number wins,losses and drawns, and scores '''    
+    ''' This function is for the reporting the individual rankings of players, the total number of wins,losses and drawns, and scores '''    
     def get_tournament_report(self):
                
         """"""
