@@ -53,7 +53,7 @@ class TournamentManager:
         self.db.save_tournament(tournament)
 
     # ---------------------------------------------------------------------------------
-    ''' This function launch a tournament and display tournaments '''
+    ''' This function launch a tournament and display tournament(s) '''
     def launch_tournament(self):
         
         tournaments_list = self.db.get_tournaments()
