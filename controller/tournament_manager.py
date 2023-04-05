@@ -41,6 +41,7 @@ class TournamentManager:
         self.user_choice = TopMenu.show_topmenu()
 
     # ---------------------------------------------------------------------------------
+    '''This function create tournaments and also save tournaments'''
     def create_tournament(self):
         # On affiche la liste des joueurs
         players_list = self.db.get_players()
@@ -52,17 +53,18 @@ class TournamentManager:
         self.db.save_tournament(tournament)
 
     # ---------------------------------------------------------------------------------
+    ''' This function launch a tournament and display tournaments '''
     def launch_tournament(self):
-        # Afficher les tournois
+        
         tournaments_list = self.db.get_tournaments()
         max_idt = tournaments_list[-1].get_idt()
         TournamentView.show_tournaments_list(tournaments_list)
         idt = TournamentView.get_tournament_id_from_user(max_idt)
         tournament = self.db.get_tournament(idt)
         rounds = self.db.get_rounds_by_idt(idt)
-        """ Les affrontements qui ont déjà eu lieu"""
+        """ matches already played"""
         duel_dico = self.get_duel_dico(rounds, tournament.get_players_list_by_ids())
-        # Pour chaque tour
+        
         next_round = 1
         round_index = len(rounds) + 1
         if round_index <= tournament.get_number_rounds():
@@ -91,14 +93,14 @@ class TournamentManager:
         else:
             TournamentView.tournament_ended()
             
-    '''this function create players'''
+    '''This function create players and also save players'''
     def create_players(self):
         players_list = PlayerView.get_players_from_user()
         self.db.save_players(players_list)
 
     def get_duel_dico(self, rounds, players_list):
         duel_dico = {}
-        # Initialisation des dictionnaires
+        
         for j in players_list:
             duel_dico[j] = []
         # Recuperation des ids des matchs déjà joués
@@ -157,20 +159,17 @@ class TournamentManager:
                 if set_match == 1:
                     break
         return matches_list, duel_dico
-
+    '''This function operate for rounds'''
     def launch_round(self, players_list_by_ids, duel_dico):
         matches_list, new_duel_dico = self.generate_matches(players_list_by_ids, duel_dico)
         # On demande à l'utilisateur de donner les scores pour le round en cours
         matches_list_upd = MatchView.get_result_matches(matches_list)
         new_matches_ids = self.db.save_matches(matches_list_upd)
         return new_duel_dico, new_matches_ids
-
+    
+    ''' This function is for the reporting the individual rankings of players, the total number wins,losses and drawns, and scores '''    
     def get_tournament_report(self):
-        # Classement des joueurs | Nombre de matchs gagnés, Nombre de matchs, Nombre de matchs perdus, Total de points
-        # Nombre de matchs total
-        # Nombre de matchs nuls
-        # Nombre de rounds
-        # Afficher les tournois
+               
         """"""
         tournaments_list = self.db.get_tournaments()
         max_idt = tournaments_list[-1].get_idt()
