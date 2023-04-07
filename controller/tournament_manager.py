@@ -13,7 +13,6 @@ from views.tournament_view import TournamentView
 # ---------------------------------------------------------------------------------
 class TournamentManager:
     def __init__(self, db):
-       
         self.user_choice = 0
         self.db = db
         while self.user_choice != 5:
@@ -37,26 +36,26 @@ class TournamentManager:
 
     # ---------------------------------------------------------------------------------
     def get_user_choice(self):
-        '''Display of the menu'''
+        """Display of the menu"""
         self.user_choice = TopMenu.show_topmenu()
 
     # ---------------------------------------------------------------------------------
     def create_tournament(self):
-        '''This function create tournaments and also save tournaments'''
-        
+        """This function create tournaments and also save tournaments"""
+
         players_list = self.db.get_players()
         max_idp = players_list[-1].get_idp()
         PlayerView.show_players_list(players_list)
-        
+
         tournament = TournamentView.get_tournament_from_user(max_idp)
-        
+
         self.db.save_tournament(tournament)
 
     # ---------------------------------------------------------------------------------
-    
+
     def launch_tournament(self):
-        ''' This function launch a tournament and display tournament(s) '''
-        
+        """This function launch a tournament and display tournament(s)"""
+
         tournaments_list = self.db.get_tournaments()
         max_idt = tournaments_list[-1].get_idt()
         TournamentView.show_tournaments_list(tournaments_list)
@@ -65,7 +64,7 @@ class TournamentManager:
         rounds = self.db.get_rounds_by_idt(idt)
         """ matches already played"""
         duel_dico = self.get_duel_dico(rounds, tournament.get_players_list_by_ids())
-        
+
         next_round = 1
         round_index = len(rounds) + 1
         if round_index <= tournament.get_number_rounds():
@@ -93,89 +92,78 @@ class TournamentManager:
                     TournamentView.tournament_ended()
         else:
             TournamentView.tournament_ended()
-            
-    
+
     def create_players(self):
-        '''This function create players and also save players'''
+        """This function create players and also save players"""
         players_list = PlayerView.get_players_from_user()
         self.db.save_players(players_list)
-        
-    
+
     def get_duel_dico(self, rounds, players_list):
-        '''This function get list of matches already played'''
-        
+        """This function get list of matches already played"""
+
         duel_dico = {}
-        
+
         for j in players_list:
             duel_dico[j] = []
-        
+
         if len(rounds) == 0:
             MatchView.no_registered_match()
             return duel_dico
         else:
-            
             matches_ids = []
             for r in rounds:
                 for idm in r.get_matches_list_by_ids():
                     matches_ids.append(idm)
             old_matches = self.db.get_matches_by_ids(matches_ids)
-            
+
             for m in old_matches:
                 duel_dico[m.get_player1().get_idp()].append(m.get_player2().get_idp())
                 duel_dico[m.get_player2().get_idp()].append(m.get_player1().get_idp())
             return duel_dico
-        
-    
+
     def generate_matches(self, players_list_by_ids, duel_dico):
-        ''' This function generate matches'''
+        """This function generate matches"""
         matches_list = []
         list_tmp = players_list_by_ids
-        
+
         while len(list_tmp) != 0:
-            
             set_match = 0
-            
+
             for p1 in list_tmp:
-                
                 for p2 in list_tmp:
-                    
                     if p1 == p2:
                         continue
-                    
+
                     if p2 not in duel_dico[p1]:
-                        
                         match_tmp = Match()
                         match_tmp.set_player1(self.db.get_player(p1))
                         match_tmp.set_player2(self.db.get_player(p2))
-                        
+
                         duel_dico[p1].append(p2)
                         duel_dico[p2].append(p1)
                         matches_list.append(match_tmp)
-                        
+
                         set_match = 1
-                        
+
                         list_tmp.remove(p1)
                         list_tmp.remove(p2)
                         break
-                    
-                
-                
+
                 if set_match == 1:
                     break
         return matches_list, duel_dico
-    
+
     def launch_round(self, players_list_by_ids, duel_dico):
-        
         matches_list, new_duel_dico = self.generate_matches(players_list_by_ids, duel_dico)
-        
+
         matches_list_upd = MatchView.get_result_matches(matches_list)
         new_matches_ids = self.db.save_matches(matches_list_upd)
         return new_duel_dico, new_matches_ids
-    
-       
+
     def get_tournament_report(self):
-        ''' This function is for the reporting the individual rankings of players, the total number of wins,losses and drawns, and scores ''' 
-               
+        """This function is for the reporting the individual rankings of players, the total number of wins,losses
+        and drawns, and scores"""
+
         """"""
         tournaments_list = self.db.get_tournaments()
         max_idt = tournaments_list[-1].get_idt()
